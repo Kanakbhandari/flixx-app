@@ -99,11 +99,13 @@ function displayPagination() {
     global.search.page++;
     const { results } = await searchAPIData();
     displaySearchResults(results);
+    window.scrollTo(0, 0);
   });
   document.querySelector('#prev').addEventListener('click', async () => {
     global.search.page--;
     const { results } = await searchAPIData();
     displaySearchResults(results);
+    window.scrollTo(0, 0);
   });
 }
 
